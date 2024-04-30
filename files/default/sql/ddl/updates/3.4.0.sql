@@ -184,3 +184,6 @@ SET `subject_id` = NULL
     WHERE REGEXP_SUBSTR(`topic_name`, "^([0-9]+)_([0-9]+)_(.+)_([0-9]+)(_onlinefs|$)");
 
 SET SQL_SAFE_UPDATES = 1;
+
+-- FSTORE-1147
+ALTER TABLE `hopsworks`.`feature_group` ADD COLUMN `notification_topic_name` VARCHAR(255) DEFAULT NULL;
